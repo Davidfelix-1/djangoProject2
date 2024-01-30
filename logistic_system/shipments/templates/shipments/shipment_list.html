@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shipment List</title>
+</head>
+<body>
+   <h1>Shipment List</h1>
+   <ul>{% for shipment in shipments %}
+   <li>{{ shipment.tracking_number }} - {{ shipment.origin }} to {{ shipment.destination }}</li>
+   {% empty %}
+   <li>No shipments available</li>
+   {% endfor %}</ul>
+</body>
+</html>
